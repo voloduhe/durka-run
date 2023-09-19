@@ -13,7 +13,7 @@ const App = () => {
   }
 
   return (
-    <div className="mx-auto w-[540px]">
+    <div className="mx-auto w-[780px]">
       <Header />
       <Layout />
     </div>
