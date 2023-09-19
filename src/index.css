@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer base {
+  body {
+    background: #f3f2f8;
+    height: 100%;
+  }
+}
