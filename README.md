@@ -2,8 +2,8 @@
 
 Ремейк версия классической Дурки Run
 
-![Санитар](https://github.com/voloduhe/durka-run/raw/main/schizo.png "Санитар")
-![Шизоид](https://github.com/voloduhe/durka-run/raw/main/schizo.png "Шизоид")
+<img src='https://github.com/voloduhe/durka-run/raw/main/medic.png' alt="Санитар" width='50px'>
+<img src='https://github.com/voloduhe/durka-run/raw/main/schizo.png' alt="Шизоид" width='50px'>
 
 ## Полезные ссылки
 
