@@ -1,16 +1,29 @@
+type GameCondition = 'stopped' | 'started' | 'winning'
+
 interface DurkaState {
-  some_value_1: boolean
-  some_value_2: string
+  schizoPosition: number
+  medicPosition: number
+  gameCondition: GameCondition
 }
 
 type DurkaAction =
   | {
-      type: 'changed_some_value_1'
-      some_value_1: DurkaState['some_value_1']
+      type: 'changed_schizo_position'
+      schizoPosition: DurkaState['schizoPosition']
     }
   | {
-      type: 'changed_some_value_2'
-      some_value_2: DurkaState['some_value_2']
+      type: 'changed_medic_position'
+      medicPosition: DurkaState['medicPosition']
+    }
+  | {
+      type: 'increment_medic'
+    }
+  | {
+      type: 'increment_schizo'
+    }
+  | {
+      type: 'changed_game_condition'
+      gameCondition: DurkaState['gameCondition']
     }
 
 export type { DurkaAction, DurkaState }

@@ -5,8 +5,9 @@ import type { DurkaAction, DurkaState } from './interfaces'
 import { durkaReducer } from './reducer'
 
 const initialDurka: DurkaState = {
-  some_value_1: true,
-  some_value_2: 'durka'
+  schizoPosition: 0,
+  medicPosition: 0,
+  gameCondition: 'stopped'
 }
 
 const DurkaContext = createContext<DurkaState>(initialDurka)
