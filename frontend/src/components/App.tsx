@@ -33,12 +33,15 @@ const App = () => {
   }
 
   useEffect(() => {
-    document.addEventListener('keyup', (event) => {
+    const onKeyUpEvent = (event: KeyboardEvent) => {
       if (event.isComposing || event.keyCode === 229) {
         return
       }
       onKeyUp(event.keyCode)
-    })
+    }
+    document.addEventListener('keyup', onKeyUpEvent)
+
+    return () => removeEventListener('keyup', onKeyUpEvent)
   })
 
   return (
