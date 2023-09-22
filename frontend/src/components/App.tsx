@@ -20,10 +20,12 @@ const App = () => {
 
   const onKeyUp = (keyCode: number) => {
     switch (keyCode) {
+      case 82:
+        dispatch({ type: 'restart_game' })
+        break
       case 81:
         dispatch({ type: 'increment_medic' })
         break
-
       case 80:
         dispatch({ type: 'increment_schizo' })
         break

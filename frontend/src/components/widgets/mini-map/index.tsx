@@ -8,14 +8,20 @@ import medicSrc from '../../../../icons/medic.svg'
 import schizoSrc from '../../../../icons/schizo.svg'
 
 const MiniMap = () => {
-  const { medicPosition, schizoPosition } = useDurka()
+  const { medicPosition, schizoPosition, gameCondition } = useDurka()
   const dispatch = useDurkaDispatch()
 
   useEffect(() => {
     if (medicPosition >= 100 || schizoPosition >= 100) {
       dispatch({ type: 'changed_game_condition', gameCondition: 'winning' })
     }
-  }, [medicPosition, schizoPosition, dispatch])
+    if (
+      (medicPosition !== 0 || schizoPosition !== 0) &&
+      !(medicPosition >= 100 || schizoPosition >= 100)
+    ) {
+      dispatch({ type: 'changed_game_condition', gameCondition: 'started' })
+    }
+  }, [medicPosition, schizoPosition, gameCondition, dispatch])
 
   return (
     <Block>

@@ -1,3 +1,5 @@
+import cn from 'classnames'
+
 import { Block } from '@/components/block'
 import { useDurka } from '@/context/durka'
 
@@ -22,8 +24,20 @@ const Status = () => {
 
   return (
     <Block>
-      <div className="animate-shake grid h-full place-items-center">
-        <p className="text-center text-3xl font-bold text-[#3446DE]">
+      <div className="grid h-full place-items-center">
+        <p
+          className={cn(
+            'relative text-center text-3xl font-bold text-[#3446DE]',
+            'after:animate-fade after:absolute after:left-0 after:top-0 after:h-full after:w-full after:rounded-full after:opacity-0 after:blur-lg after:filter after:content-[""]',
+            {
+              'after:bg-[rgba(72,222,52,0.5)]': gameCondition === 'winning',
+              'after:bg-[rgba(52,70,222,0.5)]': gameCondition !== 'winning',
+              'animate-shake': gameCondition === 'started',
+              'text-[#48de34]': gameCondition === 'winning'
+            }
+          )}
+          key={gameCondition}
+        >
           {gameCondition === 'winning' ? getWinningStatus() : getStatus()}
         </p>
       </div>

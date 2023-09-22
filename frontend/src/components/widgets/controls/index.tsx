@@ -13,7 +13,9 @@ const Controls = () => {
 
       {controls.map((item) => (
         <div className="flex items-center gap-1" key={item.id}>
-          <p className="w-7 text-3xl font-bold text-[#3446DE]">{item.key}</p>
+          <p className="w-7 text-center text-3xl font-bold text-[#3446DE]">
+            {item.key}
+          </p>
           <p className="text-2xl font-normal text-black">{item.label}</p>
         </div>
       ))}

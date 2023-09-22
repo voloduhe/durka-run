@@ -25,5 +25,8 @@ type DurkaAction =
       type: 'changed_game_condition'
       gameCondition: DurkaState['gameCondition']
     }
+  | {
+      type: 'restart_game'
+    }
 
 export type { DurkaAction, DurkaState }

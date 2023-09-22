@@ -17,7 +17,7 @@ const ProgressBar = ({
 
       <div className="relative w-[90%]">
         <div
-          className="animate-jump absolute top-[-22px] w-6 transition-all"
+          className="absolute top-[-22px] w-6 transition-all"
           style={{ left: `${progress === 0 ? progress - 1 : progress}%` }}
           key={progress}
         >

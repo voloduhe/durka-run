@@ -36,6 +36,16 @@ const durkaReducer = (state: DurkaState, action: DurkaAction) => {
         gameCondition: action.gameCondition
       }
     }
+    case 'restart_game': {
+      if (state.gameCondition === 'winning')
+        return {
+          ...state,
+          gameCondition: 'stopped',
+          schizoPosition: 0,
+          medicPosition: 0
+        }
+      return state
+    }
     default: {
       throw Error('Unknown action')
     }

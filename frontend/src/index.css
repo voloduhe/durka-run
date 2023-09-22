@@ -13,15 +13,11 @@
     0% {
       transform: rotate(-5deg);
     }
-    25% {
-      transform: rotate(0deg) translate(0, 5px);
-    }
+
     50% {
       transform: rotate(5deg);
     }
-    75% {
-      transform: rotate(0deg) translate(0, 5px);
-    }
+
     100% {
       transform: rotate(-5deg);
     }
@@ -39,11 +35,41 @@
     }
   }
 
+  @keyframes fade {
+    0% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+
+  @keyframes jump-game {
+    0% {
+      transform: translate(-2px, 0);
+    }
+    50% {
+      transform: translate(-2px, -5px);
+    }
+    100% {
+      transform: translate(-2px, 0);
+    }
+  }
+
+  .animate-fade {
+    animation: fade 1s;
+  }
+
   .animate-shake {
     animation: shake 1s infinite;
   }
 
   .animate-jump {
     animation: jump 200ms;
+  }
+  .animate-jump-game {
+    animation: jump-game 200ms;
   }
 }
