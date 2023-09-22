@@ -27,7 +27,23 @@
     }
   }
 
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
   .animate-shake {
     animation: shake 1s infinite;
+  }
+
+  .animate-jump {
+    animation: jump 200ms;
   }
 }
